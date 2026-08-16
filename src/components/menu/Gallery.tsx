@@ -1,15 +1,10 @@
 import { useEffect } from "react";
 
-import night from "@/assets/delyon-night.jpg.asset.json";
-import facade from "@/assets/facade.webp.asset.json";
-import patio from "@/assets/patio-pool.webp.asset.json";
-import van from "@/assets/coffee-van.jpeg.asset.json";
-
 const photos = [
-  { src: night.url, alt: "La Terrasse des Roses illuminée le soir" },
-  { src: facade.url, alt: "La façade De Lyon et ses bougainvilliers" },
-  { src: patio.url, alt: "Le patio, sa fontaine et ses parasols blancs" },
-  { src: van.url, alt: "Notre camionnette café vintage" },
+  { src: "/images/delyon-night.jpg", alt: "La Terrasse des Roses illuminée le soir" },
+  { src: "/images/facade.webp", alt: "La façade De Lyon et ses bougainvilliers" },
+  { src: "/images/patio-pool.webp", alt: "Le patio, sa fontaine et ses parasols blancs" },
+  { src: "/images/coffee-van.jpeg", alt: "Notre camionnette café vintage" },
 ];
 
 export function Gallery({ open, onClose }: { open: boolean; onClose: () => void }) {
