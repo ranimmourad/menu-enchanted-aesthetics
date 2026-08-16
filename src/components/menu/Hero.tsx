@@ -1,10 +1,8 @@
-import night from "@/assets/delyon-night.jpg.asset.json";
-
 export function Hero({ onExplore }: { onExplore: () => void }) {
   return (
     <header className="relative isolate overflow-hidden">
       <img
-        src={night.url}
+        src="/images/delyon-night.jpg"
         alt="La terrasse illuminée du café De Lyon à la tombée du soir"
         width={1920}
         height={1440}
@@ -17,7 +15,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         </p>
         <button
           onClick={onExplore}
-          className="rise-in group mt-10 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
+          className="rise-in group mt-20 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
           style={{ animationDelay: "120ms" }}
         >
           Découvrir la carte

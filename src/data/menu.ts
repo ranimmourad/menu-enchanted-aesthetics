@@ -1,14 +1,3 @@
-import breakfastImg from "@/assets/breakfast.jpg.asset.json";
-import coffeeImg from "@/assets/coffee.jpg.asset.json";
-import drinksImg from "@/assets/drinks.jpg.asset.json";
-import startersImg from "@/assets/starters.jpg.asset.json";
-import pizzaImg from "@/assets/pizza.jpg.asset.json";
-import pastaImg from "@/assets/pasta.jpg.asset.json";
-import platsImg from "@/assets/plats.jpg.asset.json";
-import sandwichImg from "@/assets/sandwich.jpg.asset.json";
-import burgerImg from "@/assets/burger.jpg.asset.json";
-import sweetImg from "@/assets/sweet.jpg.asset.json";
-import dessertImg from "@/assets/dessert.jpg.asset.json";
 
 export type Item = {
   name: string;
@@ -41,7 +30,7 @@ export const sections: Section[] = [
     eyebrow: "01 — Le matin",
     title: "Le Réveil Doux",
     tagline: "Formules du petit déjeuner, servies jusqu'à midi",
-    image: breakfastImg.url,
+    image: "/images/breakfast.jpg",
     groups: [
       {
         title: "Les Formules",
@@ -113,7 +102,7 @@ export const sections: Section[] = [
     eyebrow: "02 — La pause",
     title: "L'Heure du Café",
     tagline: "Torréfaction classique, Lavazza & créations signature",
-    image: coffeeImg.url,
+    image: "/images/coffee.jpg",
     groups: [
       {
         title: "Café Classique",
@@ -208,7 +197,7 @@ export const sections: Section[] = [
     eyebrow: "03 — Les verres",
     title: "Fraîcheur & Bulles",
     tagline: "Mojitos, cocktails de fruits, sodas et glaces",
-    image: drinksImg.url,
+    image: "/images/drinks.jpg",
     groups: [
       {
         title: "Soft Drinks",
@@ -287,7 +276,7 @@ export const sections: Section[] = [
     eyebrow: "04 — Pour commencer",
     title: "Le Prélude",
     tagline: "Entrées chaudes et salades du marché",
-    image: startersImg.url,
+    image: "/images/starters.jpg",
     groups: [
       {
         title: "Chaudes",
@@ -315,7 +304,7 @@ export const sections: Section[] = [
     eyebrow: "05 — Dal forno",
     title: "Le Pizze",
     tagline: "Pâte du jour, cuisson au four — comme à Napoli",
-    image: pizzaImg.url,
+    image: "/images/pizza.jpg",
     groups: [
       {
         title: "Le Nostre Pizze",
@@ -364,7 +353,7 @@ export const sections: Section[] = [
     eyebrow: "06 — Fatta in casa",
     title: "La Pasta",
     tagline: "Pâtes fraîches, sauces blanches et rouges",
-    image: pastaImg.url,
+    image: "/images/pasta.jpg",
     groups: [
       {
         title: "Sugo Bianco · Sauce blanche",
@@ -431,7 +420,7 @@ export const sections: Section[] = [
     eyebrow: "07 — Le grand plat",
     title: "La Table du Grill",
     tagline: "Viandes, poissons et spécialités de la maison",
-    image: platsImg.url,
+    image: "/images/plats.jpg",
     groups: [
       {
         title: "Du Filet · Viandes",
@@ -476,7 +465,7 @@ export const sections: Section[] = [
     eyebrow: "08 — À la main",
     title: "Pain & Compagnie",
     tagline: "Choisissez votre pain, on s'occupe du reste",
-    image: sandwichImg.url,
+    image: "/images/sandwich.jpg",
     filterLabel: "Choisissez votre pain",
     groups: [
       {
@@ -537,7 +526,7 @@ export const sections: Section[] = [
     eyebrow: "09 — Entre deux pains",
     title: "Les Burgers & l'Œuf",
     tagline: "Burgers maison et omelettes généreuses",
-    image: burgerImg.url,
+    image: "/images/burger.jpg",
     groups: [
       {
         title: "Burgers",
@@ -572,7 +561,7 @@ export const sections: Section[] = [
     eyebrow: "10 — Le goûter",
     title: "Crêpes, Gaufres & Pancakes",
     tagline: "Salés ou sucrés, à toute heure",
-    image: sweetImg.url,
+    image: "/images/sweet.jpg",
     groups: [
       {
         title: "Crêpes Salées",
@@ -651,7 +640,7 @@ export const sections: Section[] = [
     eyebrow: "11 — Pour finir",
     title: "I Dolci",
     tagline: "La dernière douceur avant de partir",
-    image: dessertImg.url,
+    image: "/images/dessert.jpg",
     groups: [
       {
         title: "Desserts",
