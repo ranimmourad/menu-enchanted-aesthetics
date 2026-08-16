@@ -47,7 +47,7 @@ export function Mosaic() {
             <Reveal
               key={tile.src}
               delay={i * 45}
-              className={tile.span ?? ""}
+              className={`h-full ${tile.span ?? ""}`}
             >
               <figure className="tile-zoom h-full w-full rounded-sm shadow-soft">
                 <img
