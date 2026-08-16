@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 
 import { sections } from "@/data/menu";
 import { Hero } from "@/components/menu/Hero";
-import { Mosaic } from "@/components/menu/Mosaic";
+import { CategoryGrid } from "@/components/menu/CategoryGrid";
+import { Gallery } from "@/components/menu/Gallery";
 import { MenuSection } from "@/components/menu/MenuSection";
 import { Reveal } from "@/components/menu/Reveal";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,7 +29,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function Nav() {
+function Nav({ onGallery }: { onGallery: () => void }) {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
 
@@ -61,10 +63,16 @@ function Nav() {
               {s.short}
             </a>
           ))}
+          <button
+            onClick={onGallery}
+            className="whitespace-nowrap text-[0.64rem] uppercase tracking-[0.18em] text-primary transition-opacity hover:opacity-70"
+          >
+            Galerie
+          </button>
         </div>
         <button
           onClick={() => setOpen((v) => !v)}
-          className="text-[0.68rem] uppercase tracking-[0.2em] text-primary md:hidden"
+          className="ml-auto text-[0.68rem] uppercase tracking-[0.2em] text-primary md:hidden"
           aria-expanded={open}
         >
           {open ? "Fermer" : "Carte"}
@@ -82,6 +90,15 @@ function Nav() {
               {s.title}
             </a>
           ))}
+          <button
+            onClick={() => {
+              setOpen(false);
+              onGallery();
+            }}
+            className="py-1 text-left text-[0.72rem] tracking-wide text-primary"
+          >
+            Galerie
+          </button>
         </div>
       ) : null}
     </nav>
@@ -90,17 +107,20 @@ function Nav() {
 
 function Index() {
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const [gallery, setGallery] = useState(false);
 
   return (
     <div id="top" className="bg-warm min-h-screen">
-      <Nav />
+      <Nav onGallery={() => setGallery(true)} />
+      <Gallery open={gallery} onClose={() => setGallery(false)} />
       <Hero
         onExplore={() =>
           menuRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
         }
       />
 
-      <Mosaic />
+      <CategoryGrid />
+
 
       <div ref={menuRef}>
         <Reveal>
