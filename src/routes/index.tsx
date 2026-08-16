@@ -51,27 +51,27 @@ function Nav() {
         >
           Terrasse de Lyon
         </a>
-        <div className="hidden min-w-0 flex-1 items-center justify-end gap-5 overflow-x-auto lg:flex [scrollbar-width:none]">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-5 md:flex">
           {sections.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="whitespace-nowrap text-[0.64rem] uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-primary"
+              className="whitespace-nowrap text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary"
             >
-              {s.title}
+              {s.short}
             </a>
           ))}
         </div>
         <button
           onClick={() => setOpen((v) => !v)}
-          className="text-[0.68rem] uppercase tracking-[0.2em] text-primary lg:hidden"
+          className="text-[0.68rem] uppercase tracking-[0.2em] text-primary md:hidden"
           aria-expanded={open}
         >
           {open ? "Fermer" : "Carte"}
         </button>
       </div>
       {open ? (
-        <div className="grid grid-cols-2 gap-2 border-t border-border/70 bg-background/95 px-5 py-4 backdrop-blur-md lg:hidden">
+        <div className="grid grid-cols-2 gap-2 border-t border-border/70 bg-background/95 px-5 py-4 backdrop-blur-md md:hidden">
           {sections.map((s) => (
             <a
               key={s.id}
