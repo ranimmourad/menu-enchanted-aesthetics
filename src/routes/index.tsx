@@ -44,19 +44,19 @@ function Nav() {
         solid ? "border-b border-border/70 bg-background/85 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <div className="mx-auto flex max-w-6xl items-center gap-6 px-5 py-4">
         <a
           href="#top"
-          className="font-display text-lg italic tracking-wide text-foreground"
+          className="shrink-0 whitespace-nowrap font-display text-lg italic tracking-wide text-foreground"
         >
           Terrasse de Lyon
         </a>
-        <div className="hidden flex-wrap items-center gap-5 lg:flex">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-5 overflow-x-auto lg:flex [scrollbar-width:none]">
           {sections.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="text-[0.68rem] uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:text-primary"
+              className="whitespace-nowrap text-[0.64rem] uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-primary"
             >
               {s.title}
             </a>
