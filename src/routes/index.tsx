@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 
 import { sections } from "@/data/menu";
 import { Hero } from "@/components/menu/Hero";
-import { Mosaic } from "@/components/menu/Mosaic";
+import { CategoryGrid } from "@/components/menu/CategoryGrid";
+import { Gallery } from "@/components/menu/Gallery";
 import { MenuSection } from "@/components/menu/MenuSection";
 import { Reveal } from "@/components/menu/Reveal";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
