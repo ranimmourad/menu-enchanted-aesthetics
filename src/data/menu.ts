@@ -25,6 +25,7 @@ export type Group = {
 
 export type Section = {
   id: string;
+  short: string;
   eyebrow: string;
   title: string;
   tagline: string;
@@ -36,6 +37,7 @@ export type Section = {
 export const sections: Section[] = [
   {
     id: "reveil",
+    short: "Matin",
     eyebrow: "01 — Le matin",
     title: "Le Réveil Doux",
     tagline: "Formules du petit déjeuner, servies jusqu'à midi",
@@ -107,6 +109,7 @@ export const sections: Section[] = [
   },
   {
     id: "cafe",
+    short: "Café",
     eyebrow: "02 — La pause",
     title: "L'Heure du Café",
     tagline: "Torréfaction classique, Lavazza & créations signature",
@@ -201,6 +204,7 @@ export const sections: Section[] = [
   },
   {
     id: "fraicheur",
+    short: "Boissons",
     eyebrow: "03 — Les verres",
     title: "Fraîcheur & Bulles",
     tagline: "Mojitos, cocktails de fruits, sodas et glaces",
@@ -279,6 +283,7 @@ export const sections: Section[] = [
   },
   {
     id: "entrees",
+    short: "Entrées",
     eyebrow: "04 — Pour commencer",
     title: "Le Prélude",
     tagline: "Entrées chaudes et salades du marché",
@@ -306,6 +311,7 @@ export const sections: Section[] = [
   },
   {
     id: "pizze",
+    short: "Pizze",
     eyebrow: "05 — Dal forno",
     title: "Le Pizze",
     tagline: "Pâte du jour, cuisson au four — comme à Napoli",
@@ -354,6 +360,7 @@ export const sections: Section[] = [
   },
   {
     id: "paste",
+    short: "Pasta",
     eyebrow: "06 — Fatta in casa",
     title: "La Pasta",
     tagline: "Pâtes fraîches, sauces blanches et rouges",
@@ -420,6 +427,7 @@ export const sections: Section[] = [
   },
   {
     id: "grill",
+    short: "Grill",
     eyebrow: "07 — Le grand plat",
     title: "La Table du Grill",
     tagline: "Viandes, poissons et spécialités de la maison",
@@ -464,6 +472,7 @@ export const sections: Section[] = [
   },
   {
     id: "pains",
+    short: "Pains",
     eyebrow: "08 — À la main",
     title: "Pain & Compagnie",
     tagline: "Choisissez votre pain, on s'occupe du reste",
@@ -524,6 +533,7 @@ export const sections: Section[] = [
   },
   {
     id: "burgers",
+    short: "Burgers",
     eyebrow: "09 — Entre deux pains",
     title: "Les Burgers & l'Œuf",
     tagline: "Burgers maison et omelettes généreuses",
@@ -558,6 +568,7 @@ export const sections: Section[] = [
   },
   {
     id: "sucre",
+    short: "Crêpes",
     eyebrow: "10 — Le goûter",
     title: "Crêpes, Gaufres & Pancakes",
     tagline: "Salés ou sucrés, à toute heure",
@@ -636,6 +647,7 @@ export const sections: Section[] = [
   },
   {
     id: "dolci",
+    short: "Dolci",
     eyebrow: "11 — Pour finir",
     title: "I Dolci",
     tagline: "La dernière douceur avant de partir",
