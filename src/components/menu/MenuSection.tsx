@@ -69,7 +69,8 @@ export function MenuSection({ section, index }: { section: Section; index: numbe
               height={900}
               className="h-[220px] w-full object-cover sm:h-[320px]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent" />
+            <div className="absolute inset-0 bg-background/35" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-6 text-center sm:p-8">
               <p className="text-[0.65rem] uppercase tracking-[0.3em] text-primary">
                 {section.eyebrow}

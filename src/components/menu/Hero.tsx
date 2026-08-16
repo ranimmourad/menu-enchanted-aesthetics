@@ -10,8 +10,8 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-background/55" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+      <div className="absolute inset-0 bg-background/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/45 to-background" />
 
       <div className="relative mx-auto flex min-h-[92svh] max-w-4xl flex-col items-center justify-center px-5 py-24 text-center">
         <p className="rise-in text-[0.65rem] uppercase tracking-[0.42em] text-primary">
