@@ -31,20 +31,23 @@ export const Route = createFileRoute("/")({
 
 function Nav({ onGallery }: { onGallery: () => void }) {
   const [open, setOpen] = useState(false);
-  const [solid, setSolid] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 120);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
-        solid ? "border-b border-border/70 bg-background/85 backdrop-blur-md" : "bg-transparent"
-      }`}
+      ref={navRef}
+      className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-5 py-4">
         <a

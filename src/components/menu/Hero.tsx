@@ -15,7 +15,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         </p>
         <button
           onClick={onExplore}
-          className="rise-in group mt-20 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
+          className="rise-in group mt-36 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
           style={{ animationDelay: "120ms" }}
         >
           Découvrir la carte
