@@ -202,6 +202,89 @@
   animation: rise-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* ------------------------------------------------------------------ */
+/* Menu "book" — page-flip presentation                                */
+/* ------------------------------------------------------------------ */
+
+@utility book-stage {
+  position: relative;
+  perspective: 2200px;
+}
+
+@utility book-shell {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  border-radius: 0.35rem;
+  background: var(--card);
+}
+
+@utility book-spine {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 0.35rem;
+  box-shadow:
+    inset 6px 0 14px -10px oklch(0.3 0.03 40 / 0.5),
+    inset -6px 0 14px -10px oklch(0.3 0.03 40 / 0.5);
+  pointer-events: none;
+}
+
+@utility book-page {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  background: var(--card);
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+@keyframes flip-next {
+  0% {
+    transform: rotateY(-95deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-prev {
+  0% {
+    transform: rotateY(95deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@utility flip-in-next {
+  animation: flip-next 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility flip-in-prev {
+  transform-origin: right center;
+  animation: flip-prev 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility book-tap {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  height: 100%;
+  width: 33%;
+  background: transparent;
+  cursor: pointer;
+  &:disabled {
+    cursor: default;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

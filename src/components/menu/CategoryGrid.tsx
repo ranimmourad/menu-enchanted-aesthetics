@@ -13,6 +13,12 @@ export function CategoryGrid() {
             <h2 className="mt-4 font-display text-4xl italic text-foreground sm:text-5xl">
               Les catégories de la carte
             </h2>
+            <a
+              href="/livre"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/80 px-6 py-2.5 text-[0.68rem] uppercase tracking-[0.24em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
+            >
+              Feuilleter le livre de la carte →
+            </a>
           </div>
         </Reveal>
 

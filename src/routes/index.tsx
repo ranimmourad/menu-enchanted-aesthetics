@@ -72,6 +72,12 @@ function Nav({ onGallery }: { onGallery: () => void }) {
           >
             Galerie
           </button>
+          <a
+            href="/livre"
+            className="whitespace-nowrap rounded-full border border-primary/40 px-3 py-1.5 text-[0.64rem] uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            Le Livre
+          </a>
         </div>
         <button
           onClick={() => setOpen((v) => !v)}
@@ -102,6 +108,13 @@ function Nav({ onGallery }: { onGallery: () => void }) {
           >
             Galerie
           </button>
+          <a
+            href="/livre"
+            onClick={() => setOpen(false)}
+            className="py-1 text-left text-[0.72rem] font-medium tracking-wide text-primary"
+          >
+            Le Livre de la Carte
+          </a>
         </div>
       ) : null}
     </nav>
