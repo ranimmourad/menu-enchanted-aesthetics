@@ -10,12 +10,12 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
       />
 
       <div className="relative mx-auto flex min-h-[92svh] max-w-4xl flex-col items-center justify-center px-5 py-24 text-center">
-        <p className="rise-in text-[0.65rem] uppercase tracking-[0.42em] text-primary drop-shadow-sm">
-          Café · Resto · Terrasse
-        </p>
+        {/* "Café · Resto · Terrasse" text removed */}
+        
         <button
           onClick={onExplore}
-          className="rise-in group mt-36 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
+          // Changed mt-36 to mt-64 to push the button lower
+          className="rise-in group mt-64 rounded-full border border-primary/40 bg-card/80 px-8 py-3 text-[0.7rem] uppercase tracking-[0.28em] text-primary backdrop-blur-sm transition-all duration-500 hover:bg-primary hover:text-primary-foreground"
           style={{ animationDelay: "120ms" }}
         >
           Découvrir la carte
