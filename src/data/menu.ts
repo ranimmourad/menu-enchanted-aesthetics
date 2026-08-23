@@ -1,4 +1,3 @@
-
 export type Item = {
   name: string;
   price?: string;
@@ -196,7 +195,7 @@ export const sections: Section[] = [
     short: "Boissons",
     eyebrow: "03 — Les verres",
     title: "Fraîcheur & Bulles",
-    tagline: "Mojitos, cocktails de fruits, sodas et glaces",
+    tagline: "Mojitos, cocktails de fruits, sodasodas et glaces",
     image: "/images/drinks.jpg",
     groups: [
       {
@@ -666,6 +665,41 @@ export const sections: Section[] = [
             note: "Fruits de saison, fruits secs, boule de glace, crème chantilly",
           },
         ],
+      },
+    ],
+  },
+  {
+    id: "chichas",
+    short: "Chichas",
+    eyebrow: "12 — La vapeur",
+    title: "Les Chichas",
+    tagline: "Fumo, Kaloud et création maison, servies avec soin",
+    image: "/images/chicha.webp",
+    groups: [
+      {
+        title: "Nos Chichas",
+        items: [
+          { name: "Chicha Fumo-Fakher", price: "15" },
+          { name: "Chicha Fumo-Adalya", price: "15" },
+          { name: "Chicha Kaloud-Fakher", price: "15" },
+          { name: "Chicha Kaloud-Adalya", price: "15" },
+          {
+            name: "Chicha Spéciale Terrasse de Lyon",
+            price: "18",
+            note: "Fruits secs, fruits frais, jus de fruits, chocolat ou café",
+          },
+          { name: "Supplément Glaçons", price: "5" },
+          {
+            name: "Chicha VIP",
+            price: "25",
+            note: "Servie avec plateau de fruits de saison",
+          },
+        ],
+      },
+      {
+        title: "Nos Parfums",
+        subtitle: "Menthe · Raisin · Pomme · Chewing Gum · Citron · Melon pêche",
+        items: [],
       },
     ],
   },
